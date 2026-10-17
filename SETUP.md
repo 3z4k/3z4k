@@ -26,7 +26,9 @@ API. GITHUB_TOKEN is optional locally and supplied by GitHub Actions:
 python3 scripts/build_cards.py
 ```
 
-The Refresh GitHub cards workflow runs daily and can also be started manually.
+The Refresh GitHub cards workflow is scheduled daily and can also be started
+manually. If GitHub Actions is unavailable, the committed cards continue to
+display the last successfully generated public data, with its update date.
 Its token can write the two card SVGs in this repository. Language percentages
 use code bytes from original public repos, excluding this profile repository
 and forks. Private repositories and private activity are never queried.
